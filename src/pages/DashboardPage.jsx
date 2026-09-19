@@ -206,7 +206,7 @@ export default function DashboardPage() {
                       <span>Completed</span>
                     </span>
                   ) : (
-                    <span className="text-slate-400 dark:text-slate-500 text-xs font-medium">Not Attempted</span>
+                    <span className="text-slate-600 dark:text-slate-400 text-xs font-medium">Not Attempted</span>
                   )}
                 </div>
 
@@ -221,15 +221,15 @@ export default function DashboardPage() {
 
                 <div className="grid grid-cols-3 gap-2 pt-1 text-center">
                   <div className="bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-200/80 dark:border-slate-800">
-                    <span className="text-[10px] text-slate-400 font-semibold uppercase">Attempts</span>
+                    <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">Attempts</span>
                     <p className="font-extrabold text-slate-900 dark:text-slate-100 text-xs mt-0.5">{lvlStats?.attempts || 0}</p>
                   </div>
                   <div className="bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-200/80 dark:border-slate-800">
-                    <span className="text-[10px] text-slate-400 font-semibold uppercase">Avg Time</span>
+                    <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">Avg Time</span>
                     <p className="font-extrabold text-brand-600 dark:text-brand-400 text-xs mt-0.5">{avgTime ? `${avgTime}s` : '-'}</p>
                   </div>
                   <div className="bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-200/80 dark:border-slate-800">
-                    <span className="text-[10px] text-slate-400 font-semibold uppercase">Best Score</span>
+                    <span className="text-[10px] text-slate-600 dark:text-slate-400 font-bold uppercase">Best Score</span>
                     <p className="font-extrabold text-emerald-600 dark:text-emerald-400 text-xs mt-0.5">{lvlStats?.bestScore || '-'}</p>
                   </div>
                 </div>
@@ -262,19 +262,19 @@ export default function DashboardPage() {
 
             <div className="grid grid-cols-2 gap-3 text-xs pt-2">
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Best Score</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Best Score</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['quick-math']?.bestScore || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Accuracy</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Accuracy</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['quick-math']?.accuracy || 0}%</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Attempts</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Attempts</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['quick-math']?.attempts || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Best Time</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Best Time</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['quick-math']?.bestTime ? `${pb['quick-math'].bestTime}s` : '-'}</p>
               </div>
             </div>
@@ -304,19 +304,19 @@ export default function DashboardPage() {
 
             <div className="grid grid-cols-2 gap-3 text-xs pt-2">
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Best Score</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Best Score</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['path-finder']?.bestScore || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Levels Cleared</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Levels Cleared</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['path-finder']?.levelsCompleted || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Attempts</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Attempts</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['path-finder']?.attempts || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Average Time</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Average Time</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['path-finder']?.averageTime ? `${pb['path-finder'].averageTime}s` : '-'}</p>
               </div>
             </div>
@@ -346,19 +346,19 @@ export default function DashboardPage() {
 
             <div className="grid grid-cols-2 gap-3 text-xs pt-2">
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Best Score</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Best Score</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['key-door']?.bestScore || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Keys Collected</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Keys Collected</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['key-door']?.keysCollected || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Attempts</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Attempts</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['key-door']?.attempts || 0}</p>
               </div>
               <div className="bg-slate-50 dark:bg-slate-800/80 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-700">
-                <span className="text-slate-400 font-medium">Average Time</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold">Average Time</span>
                 <p className="font-extrabold text-slate-900 dark:text-slate-100 text-sm mt-0.5">{pb['key-door']?.averageTime ? `${pb['key-door'].averageTime}s` : '-'}</p>
               </div>
             </div>
