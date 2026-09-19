@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased font-sans transition-colors duration-200;
+  }
+}
+
+/* Custom scrollbars for clean corporate UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth tile rotation transform transitions */
+.tile-rotate {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Glass card styling */
+.corporate-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  color: #0f172a;
+}
+
+.dark .corporate-card,
+html.dark .corporate-card {
+  background-color: #0f172a;
+  border-color: #1e293b;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  color: #f8fafc;
+}
+
+.corporate-card-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.corporate-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(79, 70, 229, 0.12);
+  border-color: #c7d2fe;
+}
+
+.dark .corporate-card-hover:hover,
+html.dark .corporate-card-hover:hover {
+  border-color: #4f46e5;
+  box-shadow: 0 12px 24px -4px rgba(79, 70, 229, 0.3);
+}
+
+/* Sine Wave Floating Motion for 3 Bubbles */
+@keyframes floatSine0 {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-18px) scale(1.03); }
+  100% { transform: translateY(12px) scale(0.99); }
+}
+
+@keyframes floatSine1 {
+  0% { transform: translateY(14px) scale(0.98); }
+  50% { transform: translateY(-24px) scale(1.04); }
+  100% { transform: translateY(-6px) scale(1); }
+}
+
+@keyframes floatSine2 {
+  0% { transform: translateY(-12px) scale(1.02); }
+  50% { transform: translateY(18px) scale(0.97); }
+  100% { transform: translateY(-16px) scale(1.03); }
+}
+
+.float-sine-0 {
+  animation: floatSine0 3.8s ease-in-out infinite alternate;
+}
+
+.float-sine-1 {
+  animation: floatSine1 4.4s ease-in-out infinite alternate;
+  animation-delay: -1.4s;
+}
+
+.float-sine-2 {
+  animation: floatSine2 4.1s ease-in-out infinite alternate;
+  animation-delay: -2.8s;
+}
